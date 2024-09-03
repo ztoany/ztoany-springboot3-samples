@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  name: springboot-data-jpa-pg-sample
+  shutdown: graceful
+
+spring:
+  application:
+    name: springboot-data-jpa-pg-sample
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/testdb?currentSchema=customer
+    username: postgres
+    password: admin123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    generate-ddl: true
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create

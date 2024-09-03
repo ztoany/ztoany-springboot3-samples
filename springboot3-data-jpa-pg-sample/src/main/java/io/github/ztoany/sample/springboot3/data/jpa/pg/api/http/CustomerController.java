@@ -1,7 +1,8 @@
-package io.github.ztoany.sample.springboot3.data.jpa.h2.api.http;
+package io.github.ztoany.sample.springboot3.data.jpa.pg.api.http;
 
-import io.github.ztoany.sample.springboot3.data.jpa.h2.domain.model.Customer;
-import io.github.ztoany.sample.springboot3.data.jpa.h2.service.CustomerService;
+
+import io.github.ztoany.sample.springboot3.data.jpa.pg.domain.model.Customer;
+import io.github.ztoany.sample.springboot3.data.jpa.pg.service.CustomerService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
