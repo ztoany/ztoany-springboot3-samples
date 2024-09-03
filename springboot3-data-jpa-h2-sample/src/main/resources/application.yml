@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  name: springboot-data-jpa-h2-sample
+  shutdown: graceful
+
+spring:
+  application:
+    name: springboot-data-jpa-h2-sample
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 12345
+    driverClassName: org.h2.Driver
+  jpa:
+    database: h2
+    generate-ddl: true
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create

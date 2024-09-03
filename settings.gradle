@@ -1,4 +1,5 @@
 rootProject.name = 'ztoany-springboot3-samples'
 include 'springboot3-helloworld-sample'
 include 'springboot3-docker-sample'
+include 'springboot3-data-jpa-h2-sample'
 
