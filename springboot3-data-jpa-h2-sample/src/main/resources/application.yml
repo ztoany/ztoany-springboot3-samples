@@ -1,11 +1,11 @@
 server:
   port: 8080
-  name: springboot-data-jpa-h2-sample
+  name: springboot3-data-jpa-h2-sample
   shutdown: graceful
 
 spring:
   application:
-    name: springboot-data-jpa-h2-sample
+    name: springboot3-data-jpa-h2-sample
   lifecycle:
     timeout-per-shutdown-phase: 30s
   datasource:

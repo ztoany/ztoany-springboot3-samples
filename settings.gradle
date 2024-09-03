@@ -3,4 +3,5 @@ include 'springboot3-helloworld-sample'
 include 'springboot3-docker-sample'
 include 'springboot3-data-jpa-h2-sample'
 include 'springboot3-data-jpa-pg-sample'
+include 'springboot3-ztoany-starter-sample'
 

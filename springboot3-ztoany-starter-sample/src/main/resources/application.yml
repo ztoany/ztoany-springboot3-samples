@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  name: springboot3-ztoany-starter-sample
+  shutdown: graceful
+  tomcat:
+    accesslog:
+      directory: D:\tmp\springlog
+
+spring:
+  application:
+    name: springboot3-ztoany-starter-sample
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+logging:
+  file:
+    path: D:\tmp\springlog
