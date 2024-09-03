@@ -15,8 +15,12 @@ gradle jibDockerBuild
 ```
 
 build docker image to tar file
+
 ```shell
 gradle jibBuildTar
+
+# tar file path: build/jib-image.tar
+# docker load < jib-image.tar
 ```
 
 ## Configuration
@@ -30,6 +34,14 @@ change arch and os
                 os = 'linux'
             }
         }
+```
+
+## Run
+
+```shell
+docker run -d --rm -p 8080:8080 --name springboot3-docker-sample alphaegg/springboot3-docker-sample:0.0.1-SNAPSHOT
+
+#  curl http://localhost:8080/api/v1/hello
 ```
 
 ## Doc
