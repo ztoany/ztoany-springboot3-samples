@@ -1,0 +1,39 @@
+import com.google.cloud.tools.jib.api.buildplan.ImageFormat
+
+plugins {
+    id 'com.google.cloud.tools.jib' version "${jibVersion}"
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+
+jib {
+    from {
+        image = 'eclipse-temurin:21.0.4_7-jdk-jammy'
+        platforms {
+            platform {
+                architecture = 'amd64' //arm64
+                os = 'linux'
+            }
+        }
+    }
+
+    to {
+        image = "alphaegg/${project.name}:${project.version}"
+        auth {
+            username = ''
+            password = ''
+        }
+    }
+
+    container {
+        format = ImageFormat.Docker
+        creationTime = "USE_CURRENT_TIMESTAMP"
+    }
+}
