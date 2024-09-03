@@ -1,0 +1,10 @@
+server:
+  port: 8080
+  name: springboot3-helloworld-sample
+  shutdown: graceful
+
+spring:
+  application:
+    name: springboot3-helloworld-sample
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
