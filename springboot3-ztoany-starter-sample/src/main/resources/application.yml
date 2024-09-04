@@ -11,6 +11,19 @@ spring:
     name: springboot3-ztoany-starter-sample
   lifecycle:
     timeout-per-shutdown-phase: 30s
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 12345
+    driverClassName: org.h2.Driver
+  jpa:
+    database: h2
+    generate-ddl: true
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+
 logging:
   file:
     path: D:\tmp\springlog
