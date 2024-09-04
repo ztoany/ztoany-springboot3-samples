@@ -36,11 +36,6 @@ subprojects { project ->
         mavenLocal()
     }
 
-    ext {
-        set('springCloudVersion', "2023.0.3")
-    }
-
-
     dependencyManagement {
         imports {
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"

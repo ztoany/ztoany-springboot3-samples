@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  name: springboot3-shardingsphere-jdbc-sample
+  shutdown: graceful
+
+spring:
+  application:
+    name: springboot3-shardingsphere-jdbc-sample
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  datasource:
+    url: jdbc:shardingsphere:classpath:sharding-jdbc-splitting.yml
+    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+  jpa:
+    database: postgresql
+    generate-ddl: true
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
