@@ -23,10 +23,10 @@ spring:
 
 elide:
   json-api:
-    path: /api/
+    path: /api
     enabled: true
   graphql:
-    path: /graphql/api/
+    path: /graphql/api
     enabled: true
   api-docs:
     path: /doc
