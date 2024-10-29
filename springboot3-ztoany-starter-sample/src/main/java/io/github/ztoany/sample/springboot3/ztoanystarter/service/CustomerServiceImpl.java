@@ -1,6 +1,6 @@
 package io.github.ztoany.sample.springboot3.ztoanystarter.service;
 
-import io.github.ztoany.infra.springboot.exception.BusinessException;
+import io.github.ztoany.infra.springboot.exception.ExceptionBuilder;
 import io.github.ztoany.sample.springboot3.ztoanystarter.api.http.CustomerRequest;
 import io.github.ztoany.sample.springboot3.ztoanystarter.dao.CustomerJpaRepository;
 import io.github.ztoany.sample.springboot3.ztoanystarter.domain.model.Customer;
@@ -18,7 +18,8 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     @Transactional
     public Customer findCustomerById(Long id) {
-        return customerJpaRepository.findById(id).orElseThrow(() -> entityNotFoundException(id));
+        return customerJpaRepository.findById(id)
+                .orElseThrow(() -> ExceptionBuilder.entityNotFoundException("customer", id));
     }
 
     @Override
@@ -30,12 +31,9 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     @Transactional
     public Customer updateCustomer(Long id, CustomerRequest request) {
-        var customer = customerJpaRepository.findById(id).orElseThrow(() -> entityNotFoundException(id));
+        var customer = customerJpaRepository.findById(id)
+                .orElseThrow(() -> ExceptionBuilder.entityNotFoundException("customer", id));
         customer.setName(request.getName());
         return customer;
-    }
-
-    private BusinessException entityNotFoundException(Long id) {
-        return new BusinessException("E10000001", String.format("Customer %d not found", id));
     }
 }
