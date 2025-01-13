@@ -4,7 +4,8 @@ server:
   shutdown: graceful
   tomcat:
     accesslog:
-      directory: D:\tmp\springlog
+      directory: /tmp/springlog
+#      directory: D:\tmp\springlog
 
 spring:
   application:
@@ -23,7 +24,11 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: create
+  messages:
+    basename: classpath:i18n/messages
+
 
 logging:
   file:
-    path: D:\tmp\springlog
+    path: /tmp/springlog
+#    path: D:\tmp\springlog
