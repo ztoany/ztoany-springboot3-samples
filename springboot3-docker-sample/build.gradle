@@ -15,7 +15,7 @@ dependencies {
 
 jib {
     from {
-        image = 'eclipse-temurin:21.0.4_7-jdk-jammy'
+        image = 'eclipse-temurin:21.0.5_11-jdk-jammy'
         platforms {
             platform {
                 architecture = 'amd64' //arm64

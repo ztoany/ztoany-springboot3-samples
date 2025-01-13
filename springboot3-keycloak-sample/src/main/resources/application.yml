@@ -1,0 +1,33 @@
+server:
+  port: 8081
+  name: springboot3-keycloak-sample
+  shutdown: graceful
+
+spring:
+  application:
+    name: springboot3-keycloak-sample
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: ${KEYCLOAK_CLIENT_ID}
+            client-secret: ${KEYCLOAK_CLIENT_SECRET}
+            client-name: keycloak
+            redirect-uri: http://127.0.0.1:8081/login/oauth2/code/keycloak
+            authorization-grant-type: authorization_code
+            scope:
+              - openid
+        provider:
+          keycloak:
+            issuer-uri: http://127.0.0.1:8080/realms/springboot
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: http://127.0.0.1:8080/realms/springboot
+
+oidc:
+  login-success-url: http://127.0.0.1:8081/app
+  post-logout-redirect-uri: http://127.0.0.1:8081
