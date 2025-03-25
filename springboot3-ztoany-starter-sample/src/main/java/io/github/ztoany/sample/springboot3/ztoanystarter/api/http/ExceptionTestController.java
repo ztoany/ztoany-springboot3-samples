@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class ExceptionTestController {
     @GetMapping("/business-exceptions")
     public String businessException() {
-        throw ExceptionBuilder.entityNotFoundException("客户", 1);
+        throw ExceptionBuilder.entityNotFoundException("customer", 1);
     }
 
     @GetMapping("/unhandled-exceptions")
