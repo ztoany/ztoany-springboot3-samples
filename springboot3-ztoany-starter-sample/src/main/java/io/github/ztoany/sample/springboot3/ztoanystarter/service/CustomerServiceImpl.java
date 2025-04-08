@@ -1,9 +1,9 @@
 package io.github.ztoany.sample.springboot3.ztoanystarter.service;
 
-import io.github.ztoany.infra.springboot.exception.ExceptionBuilder;
 import io.github.ztoany.sample.springboot3.ztoanystarter.api.http.CustomerRequest;
 import io.github.ztoany.sample.springboot3.ztoanystarter.dao.CustomerJpaRepository;
 import io.github.ztoany.sample.springboot3.ztoanystarter.domain.model.Customer;
+import io.github.ztoany.versa.infra.springboot.starter.localization.ExceptionBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

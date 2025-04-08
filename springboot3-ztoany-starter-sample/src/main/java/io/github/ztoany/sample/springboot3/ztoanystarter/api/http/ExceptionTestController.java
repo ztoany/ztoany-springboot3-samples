@@ -1,7 +1,6 @@
 package io.github.ztoany.sample.springboot3.ztoanystarter.api.http;
 
-import io.github.ztoany.infra.springboot.exception.ExceptionBuilder;
-import io.github.ztoany.infra.springboot.exception.PredefinedErrorCodes;
+import io.github.ztoany.versa.infra.springboot.starter.localization.ExceptionBuilder;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 

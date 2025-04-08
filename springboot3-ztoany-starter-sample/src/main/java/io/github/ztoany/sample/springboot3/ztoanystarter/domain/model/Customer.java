@@ -2,8 +2,8 @@ package io.github.ztoany.sample.springboot3.ztoanystarter.domain.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import io.github.ztoany.infra.springboot.hibernate.id.snowflake.SnowflakeId;
 import io.github.ztoany.sample.springboot3.ztoanystarter.api.http.CustomerRequest;
+import io.github.ztoany.versa.infra.springboot.starter.hibernate.id.snowflake.SnowflakeId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
