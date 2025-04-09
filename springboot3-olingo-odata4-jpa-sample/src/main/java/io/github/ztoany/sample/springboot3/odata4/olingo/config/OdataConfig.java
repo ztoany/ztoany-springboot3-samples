@@ -13,8 +13,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 
-
-
 import static org.springframework.web.context.WebApplicationContext.SCOPE_REQUEST;
 
 @Configuration
