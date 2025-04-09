@@ -1,0 +1,10 @@
+type Customer {
+    id: String!
+    name: String!
+    createdAt: String!
+}
+
+type Query {
+    getCustomerById(id: String!): Customer
+    listAllCustomers: [Customer]!
+}

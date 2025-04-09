@@ -1,6 +1,5 @@
 server:
   port: 8081
-  name: springboot3-keycloak-sample
   shutdown: graceful
 
 spring:

@@ -1,6 +1,5 @@
 server:
   port: 8080
-  name: springboot3-data-jpa-pg-sample
   shutdown: graceful
 
 spring:

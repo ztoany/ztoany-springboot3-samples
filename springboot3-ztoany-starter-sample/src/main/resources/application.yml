@@ -1,6 +1,5 @@
 server:
   port: 8080
-  name: springboot3-ztoany-starter-sample
   shutdown: graceful
   tomcat:
     accesslog:
