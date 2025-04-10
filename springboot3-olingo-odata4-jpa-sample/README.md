@@ -1,5 +1,15 @@
 # Spring Boot 3 Olingo OData4 Samples
 
+## install dependency
+
+```shell
+git clone https://github.com/SAP/olingo-jpa-processor-v4.git
+cd olingo-jpa-processor-v4
+git checkout 2.2.0
+cd jpa
+mvn clean install
+```
+
 ## endpoint
 
 odata base url

@@ -4,9 +4,9 @@ import com.sap.olingo.jpa.processor.core.api.JPAODataRequestContext;
 import com.sap.olingo.jpa.processor.core.api.JPAODataServiceContext;
 import com.sap.olingo.jpa.processor.core.api.JPAODataSessionContextAccess;
 import com.sap.olingo.jpa.processor.core.api.example.JPAExampleCUDRequestHandler;
+import io.github.ztoany.sample.springboot3.odata4.olingo.odata.JPACustomEdmNameBuilder;
 import jakarta.persistence.EntityManagerFactory;
 import org.apache.olingo.commons.api.ex.ODataException;
-import org.apache.olingo.server.api.debug.DefaultDebugSupport;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +26,7 @@ public class OdataConfig {
                 .setEntityManagerFactory(emf)
                 .setTypePackage("io.github.ztoany.sample.springboot3.odata4.olingo.dao.jpa.entity")
                 .setRequestMappingPath("api/odata")
+                .setEdmNameBuilder(new JPACustomEdmNameBuilder("default"))
                 .build();
     }
 
@@ -34,7 +35,7 @@ public class OdataConfig {
     public JPAODataRequestContext requestContext() {
         return JPAODataRequestContext.with()
                 .setCUDRequestHandler(new JPAExampleCUDRequestHandler())
-                .setDebugSupport(new DefaultDebugSupport())
+                //.setDebugSupport(new DefaultDebugSupport())
                 .build();
     }
 }

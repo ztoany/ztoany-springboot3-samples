@@ -13,6 +13,7 @@ import java.time.Instant;
 @Entity
 @Data
 @EntityListeners(AuditingEntityListener.class)
+//@EdmAlias(name = "myCustomer")
 public class Customer {
     @Id
     private String id;

@@ -3,8 +3,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'com.h2database:h2'
-    implementation 'com.sap.olingo:odata-jpa-processor:2.3.2'
-    implementation 'com.sap.olingo:odata-jpa-spring-support:2.3.2'
+    implementation "com.sap.olingo:odata-jpa-processor:${sapOdataJpaVersion}"
+    implementation "com.sap.olingo:odata-jpa-spring-support:${sapOdataJpaVersion}"
 
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"

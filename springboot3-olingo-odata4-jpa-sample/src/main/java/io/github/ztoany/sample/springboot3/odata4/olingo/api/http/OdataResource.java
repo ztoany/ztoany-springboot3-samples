@@ -20,7 +20,7 @@ public class OdataResource {
         this.requestContext = requestContext;
     }
 
-    @RequestMapping(value = "**", method = { RequestMethod.GET, RequestMethod.PATCH,
+    @RequestMapping(value = "/api/odata/**", method = { RequestMethod.GET, RequestMethod.PATCH,
             RequestMethod.POST, RequestMethod.DELETE })
     public void crud(final HttpServletRequest req, final HttpServletResponse resp) throws ODataException {
         new JPAODataRequestHandler(serviceContext, requestContext).process(req, resp);
