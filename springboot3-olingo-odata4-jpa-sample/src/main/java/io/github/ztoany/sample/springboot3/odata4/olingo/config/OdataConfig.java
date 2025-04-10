@@ -7,7 +7,6 @@ import com.sap.olingo.jpa.processor.core.api.example.JPAExampleCUDRequestHandler
 import io.github.ztoany.sample.springboot3.odata4.olingo.odata.JPACustomEdmNameBuilder;
 import jakarta.persistence.EntityManagerFactory;
 import org.apache.olingo.commons.api.ex.ODataException;
-import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -18,7 +17,6 @@ import static org.springframework.web.context.WebApplicationContext.SCOPE_REQUES
 @Configuration
 public class OdataConfig {
     @Bean
-    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
     public JPAODataSessionContextAccess sessionContext(EntityManagerFactory emf)
             throws ODataException {
         return JPAODataServiceContext.with()
