@@ -9,7 +9,4 @@ dependencies {
     implementation "io.github.ztoany.versa:localization-boot-starter:${versaVersion}"
     implementation "io.github.ztoany.versa:web-logging-boot-starter:${versaVersion}"
     implementation "io.github.ztoany.versa:jpa-boot-starter:${versaVersion}"
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

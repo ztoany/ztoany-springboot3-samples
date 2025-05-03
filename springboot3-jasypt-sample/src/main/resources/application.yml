@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  application:
+    name: springboot3-jasypt-sample
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/testdb?currentSchema=jasypt
+    username: admin
+#   password: admin
+    password: lWU+MRxQY007FdBWC94wlcdV/8TxlapI6TMQuUnsaOu++fxxzIi+pFWO3EH0ywBv
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    generate-ddl: true
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+jasypt:
+  encryptor:
+    password: 12345
+    property:
+      prefix: ENC(
+      suffix: )

@@ -5,13 +5,4 @@ dependencies {
     implementation 'com.h2database:h2'
     implementation "com.sap.olingo:odata-jpa-processor:${sapOdataJpaVersion}"
     implementation "com.sap.olingo:odata-jpa-spring-support:${sapOdataJpaVersion}"
-
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-
-    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
-    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

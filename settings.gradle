@@ -9,4 +9,5 @@ include 'springboot3-elide-sample'
 include 'springboot3-keycloak-sample'
 include 'springboot3-graphql-sample'
 include 'springboot3-olingo-odata4-jpa-sample'
+include 'springboot3-jasypt-sample'
 
