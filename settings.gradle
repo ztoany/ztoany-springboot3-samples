@@ -11,4 +11,5 @@ include 'springboot3-graphql-sample'
 include 'springboot3-olingo-odata4-jpa-sample'
 include 'springboot3-jasypt-sample'
 include 'springboot3-querydsl-jpa-sample'
+include 'springboot3-rsql-jpa-sample'
 
