@@ -4,9 +4,9 @@ package io.github.ztoany.sample.springboot3.rsql.jpa.api.http;
 import io.github.ztoany.sample.springboot3.rsql.jpa.api.http.dto.ContactBaseDto;
 import io.github.ztoany.sample.springboot3.rsql.jpa.api.http.dto.ContactDto;
 import io.github.ztoany.sample.springboot3.rsql.jpa.service.ContactService;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PagedModel;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/contacts")
@@ -27,7 +27,7 @@ public class ContactResource {
     }
 
     @GetMapping
-    public List<ContactDto> list(String filter, String sort) {
-        return contactService.list(filter, sort);
+    public PagedModel<ContactDto> list(String filter, Pageable pageable) {
+        return new PagedModel<>(contactService.list(filter, pageable));
     }
 }

@@ -7,11 +7,10 @@ import io.github.ztoany.sample.springboot3.rsql.jpa.dao.jpa.entity.ContactAddres
 import io.github.ztoany.sample.springboot3.rsql.jpa.dao.jpa.entity.ContactEntity;
 import io.github.ztoany.sample.springboot3.rsql.jpa.dao.jpa.repository.ContactEntityRepository;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ContactServiceImpl implements ContactService {
@@ -54,10 +53,9 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public List<ContactDto> list(String filter, String sort) {
-        var spec = RSQLJPASupport.<ContactEntity>toSpecification(filter)
-                .and(RSQLJPASupport.toSort(sort));
-        var ret = contactEntityRepository.findAll(spec);
-        return ret.stream().map(ContactDto::from).collect(Collectors.toList());
+    public Page<ContactDto> list(String filter, Pageable pageable) {
+        var spec = RSQLJPASupport.<ContactEntity>toSpecification(filter);
+        var page = contactEntityRepository.findAll(spec, pageable);
+        return page.map(ContactDto::from);
     }
 }
