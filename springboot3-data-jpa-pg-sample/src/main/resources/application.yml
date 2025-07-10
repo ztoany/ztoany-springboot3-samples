@@ -8,9 +8,9 @@ spring:
   lifecycle:
     timeout-per-shutdown-phase: 30s
   datasource:
-    url: jdbc:postgresql://127.0.0.1:5432/testdb?currentSchema=customer
-    username: postgres
-    password: admin123
+    url: jdbc:postgresql://127.0.0.1:5432/springbootsample?currentSchema=jpapg
+    username: admin
+    password: admin
     driver-class-name: org.postgresql.Driver
   jpa:
     database: postgresql
